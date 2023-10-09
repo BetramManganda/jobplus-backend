@@ -1201,6 +1201,29 @@
     colors "~1.2.1"
     string-argv "~0.3.1"
 
+"@sendgrid/client@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.7.0.tgz#f8f67abd604205a0d0b1af091b61517ef465fdbf"
+  integrity sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==
+  dependencies:
+    "@sendgrid/helpers" "^7.7.0"
+    axios "^0.26.0"
+
+"@sendgrid/helpers@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-7.7.0.tgz#93fb4b6e2f0dc65080440d6a784cc93e8e148757"
+  integrity sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==
+  dependencies:
+    deepmerge "^4.2.2"
+
+"@sendgrid/mail@7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.7.0.tgz#aba09f5ce2e9d8ceee92284c3ea8b4a90b0e38fe"
+  integrity sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==
+  dependencies:
+    "@sendgrid/client" "^7.7.0"
+    "@sendgrid/helpers" "^7.7.0"
+
 "@sentry/core@6.19.7":
   version "6.19.7"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-6.19.7.tgz#156aaa56dd7fad8c89c145be6ad7a4f7209f9785"
@@ -1630,6 +1653,14 @@
   resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.13.6.tgz#9b9a15b6ed1f22e2ede90b5ea53251461d859498"
   integrity sha512-4EmnrKI3U74M+IUxxF/wyEltAUb9C7Dw2MMuZ8UiO9Dd+mdJ7CqB05PAj4elXHnVQdYoFLNuDoV7CI4cRU9zpw==
 
+"@strapi/provider-email-sendgrid@^4.13.7":
+  version "4.13.7"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendgrid/-/provider-email-sendgrid-4.13.7.tgz#2082861e245a70ffcfa81277665f8c643a735037"
+  integrity sha512-CZ4O59fefiz0JTJPyRkDrbQtZjlVCUaXxo+J1cXCbyzxRFNG8icRmMKZJdk3pvMuPRUO2D9TeQ5yo+bedBe9hg==
+  dependencies:
+    "@sendgrid/mail" "7.7.0"
+    "@strapi/utils" "4.13.7"
+
 "@strapi/provider-email-sendmail@4.13.6":
   version "4.13.6"
   resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.13.6.tgz#de744558e059c1dca1e91b5f2546e2614552c705"
@@ -1754,6 +1785,30 @@
   version "4.13.6"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.13.6.tgz#3526979e640d10dc853e277bf628abfdee9a5fcc"
   integrity sha512-9IlkOe+mmZUh1WzQW+oWhEgRYuq2DHDWe1JzaNoCivVssFZh9PUr8GT6JYCk9LrNwGP2uX9o42K03NQi1NZ05A==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
+"@strapi/utils@4.13.7":
+  version "4.13.7"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.13.7.tgz#cf8a9286d04ea9ba7d8c8c1c7b3680f9a6f7cc10"
+  integrity sha512-v1e0408+wYr7WbAxQ1Vdwv117J8GorgAGd9l2y8nhBQIRKpNgFx0Ym93N8YVCtLQPPwHM83TOr/Sc3x99f8jbQ==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
+"@strapi/utils@^4.0.0":
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.14.0.tgz#c36bb354f5e98a408d521f04f4de2faa610256e4"
+  integrity sha512-LKpsVwKmHC8iFoQAxRvSH6vjIwqdf3yoLHPGK6fNT0R6C3NTdZvyL+zqHBVtpnpkADoaFw9dYA81kmHGEegKtg==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -2535,6 +2590,20 @@ axios@1.5.0:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
+
+axios@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
+  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+  dependencies:
+    follow-redirects "^1.14.7"
+
+axios@^0.26.0:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
 
 babel-plugin-macros@^3.1.0:
   version "3.1.0"
@@ -4279,6 +4348,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+
+follow-redirects@^1.14.7, follow-redirects@^1.14.8:
+  version "1.15.3"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
+  integrity sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -6946,6 +7020,13 @@ postcss@^8.3.11, postcss@^8.4.21, postcss@^8.4.27:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+postmark@^2.7.8:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/postmark/-/postmark-2.9.5.tgz#d863f3cea6242c1531ace3c53756f706f32d3eeb"
+  integrity sha512-F27gc6wrxdn7GADodGpECoWez7FK2Pdach7A9ni5vVZiYz1YUY7T68nvVCzxrbWCjOS7ZujyclYlq1C0a4ar1w==
+  dependencies:
+    axios "^0.25.0"
+
 prebuild-install@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-7.1.1.tgz#de97d5b34a70a0c81334fd24641f2a1702352e45"
@@ -8067,6 +8148,14 @@ std-env@^3.0.1:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
   integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
+
+strapi-provider-email-postmark@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-postmark/-/strapi-provider-email-postmark-4.0.1.tgz#a7f2e388b89f4b5a41ff42ecac5f269831a19402"
+  integrity sha512-BJiHvMtje7sHnArzfR7keW0GgMgEMokNqEedUVR9npovUG9lJGNZ8LbeOkcez5epkWvRqqdXJe6F2SKOqpamSw==
+  dependencies:
+    "@strapi/utils" "^4.0.0"
+    postmark "^2.7.8"
 
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"
